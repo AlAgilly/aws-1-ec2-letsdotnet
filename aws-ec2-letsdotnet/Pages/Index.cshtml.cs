@@ -19,7 +19,6 @@ namespace aws_ec2_letsdotnet.Pages
 
         public void OnGet()
         {
-
         }
     }
 }

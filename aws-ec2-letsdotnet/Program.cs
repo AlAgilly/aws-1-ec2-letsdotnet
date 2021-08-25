@@ -1,13 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace aws_ec2_letsdotnet
+namespace LetsDotNet
 {
     public class Program
     {
@@ -18,9 +19,13 @@ namespace aws_ec2_letsdotnet
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
+                .ConfigureWebHostDefaults(
+                    webBuilder =>
+                    {
+                        webBuilder.UseKestrel(options => { options.Listen(IPAddress.Any, 80); });
+                        webBuilder.UseStartup<Startup>();
+                    });
+                
+        
     }
 }
