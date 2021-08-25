@@ -48,7 +48,7 @@ While taking this course, I had a lot of things go wrong. I'm wring down all my 
 	SDK: `5.0`
 	Type: `Web App`
 	
-	> Build to see if the app is up
+		> Build to see if the app is up
 	* Add a line to `pages/index.cshtml`
 		```html
 		<p>App is running on @Environment.MachineName</p>
@@ -57,7 +57,7 @@ While taking this course, I had a lot of things go wrong. I'm wring down all my 
 	
 	* Add your image into your file system with the name `image.png`
 	
-	> Build the app again. The app should say "App is running on *NAME*" where *NAME* can be checked in command prompt using the command `hostname`
+		> Build the app again. The app should say "App is running on *NAME*" where *NAME* can be checked in command prompt using the command `hostname`
 
 	* Get public IP of  instance in AWS
 	* In Rider, go to `Tools > Start SSH Session`
