@@ -58,6 +58,7 @@ While taking this course, I had a lot of things go wrong. I'm wring down all my 
 	* Add your image into your file system with the name `image.png`
 	
 	> Build the app again. The app should say "App is running on *NAME*" where *NAME* can be checked in command prompt using the command `hostname`
+
 	* Get public IP of  instance in AWS
 	* In Rider, go to `Tools > Start SSH Session`
 		Host: *`InstanceIP`* (the IP we got from the last step)
@@ -66,11 +67,13 @@ While taking this course, I had a lot of things go wrong. I'm wring down all my 
 	* In the new Rider terminal that should have opened up, type these commands:
 		```bash
 		sudo yum update
+		```
+		```bash
 		sudo yum install dotnet-sdk-5.0
 		```
 			
 		> Type `dotnet --version` in that same terminal to see if the install was successful.
-		
+
 		```bash
 		mkdir letsdotnet
 		```
